@@ -63,15 +63,9 @@ function email_date() {
 
 MDIR_PATH="$1"
 
-if [ -x `which gls` ]; then
-  LS=gls
-  DATE=gdate
-  AWK=gawk
-else
-  LS=ls
-  DATE=date
-  AWK=awk
-fi
+LS=ls
+DATE=date
+AWK=awk
 
 [ $# -lt 1 ] && usage
 [ ! -d "$MDIR_PATH" ] && usage "Error: $MDIR_PATH does not exist"

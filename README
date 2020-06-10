@@ -4,7 +4,13 @@ This will fix problems with mail clients like Apple's mail.app which uses the fi
 
 This script has to be run by a user [root] with the necessary privileges to read/modify files in a user's Maildir. It has been successfully tested on Linux.
 
-Original author:  
-Date: July 4th, 2005  
-Author: Benson Wong  
+Original author:
+Date: July 4th, 2005
+Author: Benson Wong
 Email: tummytech@gmail.com
+
+## how to run
+
+```bash
+bash ./fix_imap_time_for_apple_mail_app.sh /path/to/maildir
+```
