@@ -80,7 +80,7 @@ IFS="
 set -f
 echo "start"
 # Find all emails
-for i in `find $MDIR_PATH -type f | egrep -v "(courierimap|maildirsize|maildirfolder)"`; do
+for i in `find $MDIR_PATH -type f | egrep -v "(courierimap|maildirsize|maildirfolder|dovecot)"`; do
   email_date "$i"
   if [ -z "$EDATE" ]; then
     echo ""
@@ -98,6 +98,8 @@ for i in `find $MDIR_PATH -type f | egrep -v "(courierimap|maildirsize|maildirfo
   echo ""
   echo `basename $i` "from $ODATE to $EDATE"
   touch -c -t "$EDATE" "$i"
+  
+  find $1 -name 'dovecot.index.cache' -delete
 done
 
 echo ""
