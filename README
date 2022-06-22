@@ -14,3 +14,6 @@ Email: tummytech@gmail.com
 ```bash
 bash ./fix_imap_time_for_apple_mail_app.sh /path/to/maildir
 ```
+
+Stop dovecot first, resume it later
+If using a frontend server as an IMAPc proxy, stop dovecot there and remove the caches there as well
